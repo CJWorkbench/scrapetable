@@ -27,22 +27,22 @@ msgid "_spec.parameters.first_row_is_header.name"
 msgstr ""
 
 #. default-message: Server gave unexpected HTTP response: {httpStatus}
-#: scrapetable.py:209
+#: scrapetable.py:212
 msgid "http.notOk"
 msgstr ""
 
 #. default-message: Did not find any <table> tags in this page
-#: scrapetable.py:249 scrapetable.py:263
+#: scrapetable.py:252 scrapetable.py:266
 msgid "html.noTables"
 msgstr ""
 
 #. default-message: Found a <table> tag with no columns
-#: scrapetable.py:256
+#: scrapetable.py:259
 msgid "html.noColumns"
 msgstr ""
 
 #. default-message: Please choose a table position between 1 and {nTables}
-#: scrapetable.py:272
+#: scrapetable.py:275
 msgid "params.badTablenum"
 msgstr ""
 

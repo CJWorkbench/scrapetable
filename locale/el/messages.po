@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 16:32+0000\n"
+"POT-Creation-Date: 2021-01-26 16:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -40,19 +40,19 @@ msgstr ""
 msgid "_spec.parameters.first_row_is_header.name"
 msgstr ""
 
-#: scrapetable.py:209
+#: scrapetable.py:212
 msgid "http.notOk"
 msgstr ""
 
-#: scrapetable.py:249 scrapetable.py:263
+#: scrapetable.py:252 scrapetable.py:266
 msgid "html.noTables"
 msgstr ""
 
-#: scrapetable.py:256
+#: scrapetable.py:259
 msgid "html.noColumns"
 msgstr ""
 
-#: scrapetable.py:272
+#: scrapetable.py:275
 msgid "params.badTablenum"
 msgstr ""
 

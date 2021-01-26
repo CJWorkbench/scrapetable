@@ -72,6 +72,20 @@ def _temp_httpfile(
         yield path
 
 
+def test_render_none():
+    with tempfile.NamedTemporaryFile() as render_tf:
+        render_path = Path(render_tf.name)
+        result = render(
+            pa.table({}),
+            P(),
+            render_path,
+            fetch_result=None,
+            settings=DefaultSettings(),
+        )
+        assert result == []
+        _assert_table_file(render_path, None)
+
+
 def test_render_empty():
     with tempfile.NamedTemporaryFile() as fetch_tf, tempfile.NamedTemporaryFile() as render_tf:
         fetch_result = FetchResult(Path(fetch_tf.name), [])

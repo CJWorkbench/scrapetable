@@ -180,10 +180,13 @@ def render(
     params: Dict[str, Any],
     output_path: Path,
     *,
-    fetch_result: FetchResult,
+    fetch_result: Optional[FetchResult],
     settings: Settings,
     **kwargs
 ) -> List[I18nMessage]:
+    if fetch_result is None:
+        return []
+
     errors = [e.message for e in fetch_result.errors]
 
     if fetch_result.path.stat().st_size == 0:
