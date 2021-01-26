@@ -1,0 +1,48 @@
+#. default-message: Scrape HTML table
+msgid "_spec.name"
+msgstr ""
+
+#. default-message: Load a table from a webpage and update it when the webpage changes.
+msgid "_spec.description"
+msgstr ""
+
+#. default-message: http://
+msgid "_spec.parameters.url.placeholder"
+msgstr ""
+
+#. default-message: Table's position on the page
+msgid "_spec.parameters.tablenum.name"
+msgstr ""
+
+#. default-message: 1
+msgid "_spec.parameters.tablenum.placeholder"
+msgstr ""
+
+#. default-message: Scrape
+msgid "_spec.parameters.version_select.name"
+msgstr ""
+
+#. default-message: First row is header
+msgid "_spec.parameters.first_row_is_header.name"
+msgstr ""
+
+#. default-message: Server gave unexpected HTTP response: {httpStatus}
+#: scrapetable.py:209
+msgid "http.notOk"
+msgstr ""
+
+#. default-message: Did not find any <table> tags in this page
+#: scrapetable.py:249 scrapetable.py:263
+msgid "html.noTables"
+msgstr ""
+
+#. default-message: Found a <table> tag with no columns
+#: scrapetable.py:256
+msgid "html.noColumns"
+msgstr ""
+
+#. default-message: Please choose a table position between 1 and {nTables}
+#: scrapetable.py:272
+msgid "params.badTablenum"
+msgstr ""
+

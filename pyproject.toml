@@ -1,0 +1,62 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "scrapetable"
+version = "0.0.1"
+description = "Workbench module to download an HTML table from the Web"
+authors = ["Adam Hooper <adam@adamhooper.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+beautifulsoup4 = "~=4.9.0"
+cjwmodule = "~=3.1"
+cjwparquet = "~=2.1.0"
+cjwparse = "~=1.1.0"
+html5lib = "~=1.1"
+pandas = "~=0.25.0"
+pyarrow = "~=2.0"
+python = "~=3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "~=6.0"
+pytest-cov = "~=2.11"
+pytest-httpx = "~=0.10.1"
+
+[tool.isort]
+# Black compatibility
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+skipsdist = True
+envlist = py38-{pyflakes,black,isort,pytest}
+
+[flake8]
+exclude = venv/*,tox/*,specs/*,build/*
+ignore = E123,E128,E266,E402,W503,E731,W601
+max-line-length = 88
+
+[testenv]
+skip_install = true
+deps =
+  pyflakes: pyflakes>=2.2
+  black: black
+  isort: isort
+  pytest: poetry
+commands_pre =
+  pytest: poetry install -v
+commands =
+  pyflakes: pyflakes scrapetable.py tests
+  black: black --check scrapetable.py tests
+  isort: isort --check --diff scrapetable.py tests
+  pytest: poetry run pytest --cov=scrapetable --cov-report term-missing -v
+"""
