@@ -12,18 +12,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 beautifulsoup4 = "~=4.9.0"
-cjwmodule = "~=3.1"
-cjwparquet = "~=2.1.0"
-cjwparse = "~=1.1.0"
+cjwmodule = "~=4.0"
+cjwparquet = "~=2.2"
+cjwparse = "~=2.0"
 html5lib = "~=1.1"
 pandas = "~=0.25.0"
-pyarrow = "~=2.0"
+pyarrow = "~=3.0"
 python = "~=3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "~=6.0"
 pytest-cov = "~=2.11"
-pytest-httpx = "~=0.10.1"
+pytest-httpx = "~=0.11.0"
 
 [tool.isort]
 # Black compatibility
